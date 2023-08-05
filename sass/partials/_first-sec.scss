@@ -1,0 +1,11 @@
+.first-section {
+  .container > p {
+    @include media-breakpoint-down(lg) {
+      width: 95% !important;
+      margin: 0 auto;
+    }
+  }
+  div:has(img) h1 {
+    font-size: 176%;
+  }
+}

@@ -1,0 +1,81 @@
+.hero-section {
+  width: 100%;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 1115px;
+  background-position: -221% 115%;
+
+  p {
+    @include media-breakpoint-down(lg) {
+      width: 100% !important;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    width: 100%;
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 1115px;
+    background-position: 519% 115%;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 100%;
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 1115px;
+    background-position: 159% 115%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-image: url("../images/bg-intro-mobile.svg");
+    background-size: 100%;
+    background-position: initial;
+  }
+  @media (min-width: 2025px) {
+    &,
+    .phone-img {
+      background-image: none;
+    }
+    & div:has(> img) {
+      overflow: hidden;
+    }
+    & div:has(> img) img {
+      display: block !important;
+    }
+    & div:has(> img) div {
+      display: none;
+    }
+  }
+}
+.mt-150px {
+  margin-top: -150px;
+}
+
+.fake-width-height {
+  width: 562px;
+  height: 692px;
+  position: relative;
+  @include media-breakpoint-down(lg) {
+    & {
+      height: 528px;
+    }
+  }
+}
+.fake-width-height::after {
+  content: url("../images/image-mockups.png");
+  position: absolute;
+  inset: -210px 0 0 -26px;
+  z-index: 1;
+
+  @include media-breakpoint-down(lg) {
+    content: "";
+    background-image: url(../images/image-mockups.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    inset: 0;
+    margin-top: -185px;
+  }
+}
+.show {
+  z-index: -1;
+}

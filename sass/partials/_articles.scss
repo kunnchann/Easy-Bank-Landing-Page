@@ -1,0 +1,25 @@
+.articles-section {
+  div:has(> a) {
+    &:hover {
+      a {
+        color: hsl(136, 65%, 51%) !important;
+      }
+    }
+  }
+  header {
+    font-size: 40px;
+  }
+  h1 {
+    font-size: 100%;
+  }
+  a {
+    font-size: 20px;
+    line-height: 22px;
+    transition: all 0.1s linear;
+  }
+  div:has(> img) {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 35px;
+    }
+  }
+}

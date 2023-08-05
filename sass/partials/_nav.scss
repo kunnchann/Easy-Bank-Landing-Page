@@ -1,0 +1,24 @@
+.btn-gradient {
+  transition: all 0.1s linear;
+  border-color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+.text-bottom-underline {
+  transition: all 0.2s linear;
+  border-bottom: 3px solid transparent;
+}
+.text-bottom-underline:hover {
+  border-bottom: 3px solid hsl(136, 65%, 51%);
+}
+.top-paddingX-50 {
+  top: 50px;
+  padding: 0px 50px;
+}
